@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.abc.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_main"
+            app:destination="@id/main" />
+        <action
+            android:id="@+id/action_login_to_singup"
+            app:destination="@id/singup" />
+        <action
+            android:id="@+id/action_login_to_storefrag"
+            app:destination="@id/storefrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/singup"
+        android:name="com.example.abc.Singup"
+        android:label="fragment_singup"
+        tools:layout="@layout/fragment_singup" >
+        <action
+            android:id="@+id/action_singup_to_otpfrag"
+            app:destination="@id/otpfrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/main"
+        android:name="com.example.abc.Main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/otpfrag"
+        android:name="com.example.abc.otpfrag"
+        android:label="fragment_otpfrag"
+        tools:layout="@layout/fragment_otpfrag" >
+        <action
+            android:id="@+id/action_otpfrag_to_detailsfrag"
+            app:destination="@id/detailsfrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/storefrag"
+        android:name="com.example.abc.storefrag"
+        android:label="fragment_storefrag"
+        tools:layout="@layout/fragment_storefrag" />
+    <fragment
+        android:id="@+id/detailsfrag"
+        android:name="com.example.abc.Detailsfrag"
+        android:label="fragment_detailsfrag"
+        tools:layout="@layout/fragment_detailsfrag" >
+        <action
+            android:id="@+id/action_detailsfrag_to_storefrag"
+            app:destination="@id/storefrag" />
+        <action
+            android:id="@+id/action_detailsfrag_to_main"
+            app:destination="@id/main" />
+    </fragment>
+</navigation>
