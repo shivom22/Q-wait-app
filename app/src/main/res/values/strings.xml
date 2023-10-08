@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Queue Management App</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="welcome_back">"Welcome Back"</string>
+</resources>
