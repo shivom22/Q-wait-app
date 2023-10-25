@@ -25,7 +25,7 @@ object NetworkModule {
     fun providesOkHttpClient(@ApplicationContext context: Context): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(ChuckerInterceptor(context))
-            .connectTimeout(10, TimeUnit.SECONDS)
+            .connectTimeout(16, TimeUnit.SECONDS)
             .build()
 
     @Provides
@@ -44,3 +44,4 @@ object NetworkModule {
         return retrofit.create(ApiService::class.java)
     }
 }
+

@@ -12,6 +12,7 @@ import com.example.abc.model.otpRequest
 import com.example.queuemanagementapp.api.ApiService
 import com.example.queuemanagementapp.utils.ApiState
 import com.google.gson.Gson
+import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Call
@@ -54,6 +55,7 @@ class Repository @Inject constructor(private val apiService: ApiService) {
     private fun handleResponsesignup(response: Call<ResponseBody>) {
         val gson  = Gson()
         try {
+            val time = OkHttpClient().connectTimeoutMillis
             val responseBody = response.execute()
             if (responseBody.isSuccessful && responseBody.errorBody() != null) {
                 val userResponseJson = responseBody.body()?.string()
@@ -63,7 +65,8 @@ class Repository @Inject constructor(private val apiService: ApiService) {
                 } else {
                     _userLiveData.postValue(ApiState.Error("Response body is empty"))
                 }
-            } else {
+            }
+            else {
                 _userLiveData.postValue(ApiState.Error("Failed !"))
             }
         } catch (e: Exception) {

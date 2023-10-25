@@ -6,9 +6,9 @@ sealed class ApiState<T>(
     val data: T? = null,
     val errorMsg: String? = null
 ) {
-    class Success<T>(data: T? =null) : ApiState<T>(data = data)
+    class Success<T>(data: T?) : ApiState<T>(data = data)
 
-    class Error<T>(errorMsg: String?,data: T? = null) : ApiState<T>(errorMsg =errorMsg, data = data)
+    class Error<T>(errorMsg: String?) : ApiState<T>(errorMsg =errorMsg)
 
     class Loading<T> : ApiState<T>()
 }

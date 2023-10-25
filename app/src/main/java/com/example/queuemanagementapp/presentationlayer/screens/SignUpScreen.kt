@@ -68,7 +68,6 @@ import com.example.queuemanagementapp.utils.ApiState
         }
     }
 
-
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     fun SignUpScreen(navController: NavController) {

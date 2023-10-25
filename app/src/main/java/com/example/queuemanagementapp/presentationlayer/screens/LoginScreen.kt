@@ -84,7 +84,10 @@ fun LoginScreen(navController: NavController) {
             is ApiState.Loading -> {
                 isLoaderVisible = true
             }
-            else -> {}
+            else -> {
+                isError = true
+                errortxt = "TimeOut"
+            }
         }
     }
 

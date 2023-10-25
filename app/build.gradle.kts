@@ -108,6 +108,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
     implementation("com.github.bumptech.glide:compose:1.0.0-alpha.1")
+
 }
 kapt {
     correctErrorTypes = true

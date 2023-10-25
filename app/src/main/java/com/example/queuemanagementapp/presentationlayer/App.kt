@@ -1,5 +1,7 @@
 package com.example.queuemanagementapp.presentationlayer
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -10,6 +12,7 @@ import com.example.queuemanagementapp.presentationlayer.screens.OtpScreen
 import com.example.queuemanagementapp.presentationlayer.screens.SignUpScreen
 
 
+@RequiresApi(Build.VERSION_CODES.S)
 @Composable
 fun App() {
     val navController = rememberNavController()
